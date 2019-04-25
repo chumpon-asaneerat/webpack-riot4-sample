@@ -1,0 +1,19 @@
+{
+  "name": "github-node-buildtools-template",
+  "version": "1.0.0",
+  "description": "The github node with buildtools template",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chumpon-asaneerat/github-node-buildtools-template.git"
+  },
+  "author": "Chumpon Asaneerat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chumpon-asaneerat/github-node-buildtools-template/issues"
+  },
+  "homepage": "https://github.com/chumpon-asaneerat/github-node-buildtools-template#readme"
+}
