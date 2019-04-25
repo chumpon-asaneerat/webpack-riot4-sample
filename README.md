@@ -1,2 +1,2 @@
-# github-node-empty-project
-The node js empty tempate
+# github-empty-project
+The github empty tempate
