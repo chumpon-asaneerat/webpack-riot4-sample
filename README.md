@@ -1,2 +1,2 @@
 # github-empty-project
-The github empty tempate
+The github node with buildtools template
