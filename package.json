@@ -47,12 +47,15 @@
     "@types/helmet": "0.0.43",
     "@types/morgan": "^1.7.35",
     "@types/serve-favicon": "^2.2.30",
+    "@types/swagger-ui-dist": "^3.0.0",
+    "@types/swagger-ui-express": "^3.0.0",
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.4",
     "express": "^4.16.4",
     "helmet": "^3.16.0",
     "morgan": "^1.9.1",
     "serve-favicon": "^2.5.0",
-    "swagger-ui": "^3.22.1"
+    "swagger-ui-dist": "^3.22.1",
+    "swagger-ui-express": "^4.0.2"
   }
 }
