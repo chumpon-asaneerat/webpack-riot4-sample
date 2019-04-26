@@ -47,6 +47,7 @@
     "@types/helmet": "0.0.43",
     "@types/morgan": "^1.7.35",
     "@types/serve-favicon": "^2.2.30",
+    "@types/swagger-jsdoc": "0.0.2",
     "@types/swagger-ui-dist": "^3.0.0",
     "@types/swagger-ui-express": "^3.0.0",
     "body-parser": "^1.19.0",
@@ -55,6 +56,7 @@
     "helmet": "^3.16.0",
     "morgan": "^1.9.1",
     "serve-favicon": "^2.5.0",
+    "swagger-jsdoc": "^3.2.9",
     "swagger-ui-dist": "^3.22.1",
     "swagger-ui-express": "^4.0.2"
   }

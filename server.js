@@ -7,7 +7,7 @@ const cookieparser = require("cookie-parser");
 const favicon = require("serve-favicon");
 
 const swaggerUi = require('swagger-ui-express');
-const swaggerDocument = require('./swagger.json');
+const swaggerJSDoc = require('swagger-jsdoc');
 
 const APPNAME = "Express Project";
 const PORT = 3000;
@@ -26,17 +26,80 @@ const iconpath = path.join(__dirname, "public", "favicon.ico");
 app.use(favicon(iconpath));
 
 app.get("/", (req, res) => {
-    res.send(`It's work!!`);
+    res.status(200).send(`It's work!!`);
 });
 
+/**
+ * @swagger
+ * /test:
+ *   post:
+ *     description: Login 123
+ *     consumes:
+ *       - application/json
+ *     produces:
+ *       - application/json
+ *     parameters:
+ *       - name: test
+ *         description: Items list array
+ *         in: formData
+ *         required: false
+ *         type: array
+ *         collectionFormat: multi
+ *         items:
+ *            type: "integer"
+ *       - name: profileId
+ *         description: Password
+ *         in: formData
+ *         required: true
+ *         type: string
+ *       - name: file
+ *         description: File To Upload
+ *         in: formData
+ *         required: false
+ *         type: file
+ *     responses:
+ *       200:
+ *         description: OK result in json object.
+ */
 app.post('/test', function(req, res) {
 	console.log('req', req)
-	res.json({ status: 'OK'});
+	res.status(200).json({ status: 'OK'});
 });
-app.get('/bar', function(req, res) { res.json({ status: 'OKISH'}); });
 
-// set swagger ui
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+/**
+ * @swagger
+ * /bar:
+ *   get:
+ *     description: home get api
+ *     produces:
+ *       - application/json
+ *     responses:
+ *       200:
+ *         description: result in json object.
+ */
+app.get('/bar', function(req, res) { 
+    res.status(200).json({ status: 'OKISH'}); 
+});
+
+// set swagger (used jsdoc)
+const swaggerSpec = swaggerJSDoc({
+    swaggerDefinition: {
+        info: {
+            title: 'My App API',
+            version: '1.0.0'
+        }
+    },
+    //apis: ['./routes/index.js']
+    apis: ['./server.js']
+});
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+
+// set swagger (used external json)
+/*
+const swaggerDocument = require('./swagger.json');
+let swaggerOpts = { explorer: false };
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument, swaggerOpts));
+*/
 
 const server = app.listen(PORT, () => {
     console.log(`${APPNAME} listen on port: ${PORT}`);
