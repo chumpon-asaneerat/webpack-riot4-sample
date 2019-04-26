@@ -1,2 +1,2 @@
-# github-node-buildtools-template
-The github node with buildtools template
+# github-expressjs-buildtools-template
+The github express.js with buildtools template
