@@ -26,7 +26,7 @@ const iconpath = path.join(__dirname, "public", "favicon.ico");
 app.use(favicon(iconpath));
 
 app.get("/", (req, res) => {
-    res.status(200).send(`It's work!!`);
+    res.status(200).send(`It's work!!!`);
 });
 
 /**
