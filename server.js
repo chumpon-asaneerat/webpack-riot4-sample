@@ -16,6 +16,60 @@ const PORT = 3000;
 
 const app = express();
 
+const useStatusMonitor = () => {
+app.use(require('express-status-monitor')({
+        title: APPNAME + ' Status', // Default title
+        //theme: 'default.css',     // Default styles
+        path: '/status',
+        //socketPath: '/socket.io', // In case you use a custom path
+        //websocket: existingSocketIoInstance,
+        spans: [{
+            interval: 1,            // Every second
+            retention: 60           // Keep 60 data points in memory
+        }, {
+            interval: 5,            // Every 5 seconds
+            retention: 60
+        }, {
+            interval: 15,           // Every 15 seconds
+            retention: 60
+        }],
+        chartVisibility: {
+            cpu: true,
+            mem: true,
+            load: true,
+            responseTime: true,
+            rps: true,
+            statusCodes: true
+        },
+        //ignoreStartsWith: '/admin',
+        healthChecks: []
+    }));
+};
+
+const sendDummyRequest = () => {
+    let request = require('request');
+    let requestUrl = `http://localhost:${PORT}/`;
+    let interval = 50;
+    let sendRequestHomeUrl = () => {
+        setTimeout(() => {
+            const code = 200 + Math.random() * 399;
+            request.get(`${requestUrl}`);
+            sendRequestHomeUrl();
+          }, interval);
+    };
+    sendRequestHomeUrl();
+};
+
+//## [ Status Monitor ] ===================================================##
+//
+// useStatusMonitor function need to call first before another middlewares.
+//
+// comment out this line in production.
+useStatusMonitor();
+//
+//
+//## [ Status Monitor ] ===================================================##
+
 app.use(helmet());
 app.use(morgan("dev"));
 
@@ -106,3 +160,7 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument, swaggerOp
 const server = app.listen(PORT, () => {
     console.log(`${APPNAME} listen on port: ${PORT}`);
 });
+
+// Code for test express status monitor.
+// uncomment if not used.
+sendDummyRequest();
