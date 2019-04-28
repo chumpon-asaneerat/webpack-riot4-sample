@@ -65,7 +65,8 @@ const sendDummyRequest = () => {
 // useStatusMonitor function need to call first before another middlewares.
 //
 // comment out this line in production.
-useStatusMonitor();
+//
+//useStatusMonitor(); // tell app express app to use status monitor.
 //
 //
 //## [ Status Monitor ] ===================================================##
@@ -161,6 +162,11 @@ const server = app.listen(PORT, () => {
     console.log(`${APPNAME} listen on port: ${PORT}`);
 });
 
+//## [ Status Monitor ] ===================================================##
 // Code for test express status monitor.
-// uncomment if not used.
-sendDummyRequest();
+//
+// comment out if not used.
+//
+//sendDummyRequest(); // make a fake request.
+//
+//## [ Status Monitor ] ===================================================##
