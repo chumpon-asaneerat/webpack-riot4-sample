@@ -39,7 +39,8 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify-es": "^1.0.4",
     "gulp-watch": "^5.0.1",
-    "jsdoc": "^3.5.5"
+    "jsdoc": "^3.5.5",
+    "nodemon": "^1.18.11"
   },
   "dependencies": {
     "@types/body-parser": "^1.17.0",
