@@ -119,8 +119,13 @@ app.get("/", (req, res) => {
     res.status(200).send(`It's work!!!`);
 });
 
-app.get("/:file", (req, res) => {
-    res.sendFile(path.join(__dirname, req.params.file));
+app.get("/:file", (req, res, next) => {
+    if (req.params.file === 'index.html') {
+        res.sendFile(path.join(__dirname, req.params.file));
+    }
+    else {
+        next();
+    }
 });
 
 /**
