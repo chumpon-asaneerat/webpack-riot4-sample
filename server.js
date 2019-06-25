@@ -103,6 +103,8 @@ const dist_libs = [
     { "route": "/dist", "path": "flag-icon-css-3.1.0" },
     /* moment */
     { "route": "/dist/js", "path": "moment-2.22.2" },
+    /* riotjs */
+    { "route": "/dist/js", "path": "riotjs-4.2.0" },
 ];
 
 function dist_lib(app, exportRoute, localPath) {
