@@ -1,2 +1,2 @@
-# github-expressjs-buildtools-template
-The github express.js with buildtools template
+# Gulp Riot.js 4 sample
+The Gulp Riot.js 4 sample
