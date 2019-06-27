@@ -39,8 +39,11 @@
     <script src="/dist/js/moment.min.js"></script>
 
     <!-- Riot Tags <todo/> is specified in an external file -->
+    <!--
     <script src="/public/riot/app.riot" type="riot"></script>
     <script src="/public/riot/todo.riot" type="riot"></script>
+    -->
+    <script src="/public/riot/child-tag.riot" type="riot"></script>
     <script src="/public/riot/my-component.riot" type="riot"></script>
     <!-- Riot.js 4.x -->
     <script src="/dist/js/riot+compiler.min.js"></script>
@@ -48,7 +51,7 @@
         (async function main() {
             await riot.compile();
             //riot.mount('app, todo');
-            riot.mount('my-component');
+            riot.mount('my-component, child-tag');
         }())
     </script>
 </body>
