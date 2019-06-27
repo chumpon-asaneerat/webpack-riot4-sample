@@ -14,7 +14,8 @@
     <!-- style -->
     <style>
         :host {
-            padding: 16px;
+            display: block;
+            padding: 5px;
         }
     </style>
 
@@ -23,6 +24,12 @@
         export default {
             state: {
                 items: []
+            },
+            onBeforeMount(props) {
+                //console.log('todo - before mount props:', props);
+            },
+            onMounted() {
+                //console.log('todo - mount props:', this.props);
             },
             add(e) {
                 e.preventDefault();
