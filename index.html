@@ -20,7 +20,12 @@
 <body>
     <p><i class="fas fa-arrow-right"></i>Sample icon</p>
     <!-- Riot.js mount point -->
-    <todo></todo>
+    <!--
+    <app>
+        <todo></todo>
+    </app>
+    -->
+    <my-component></my-component>
     
     <!-- JQuery -->
     <script src="/dist/js/jquery.min.js"></script>
@@ -34,13 +39,16 @@
     <script src="/dist/js/moment.min.js"></script>
 
     <!-- Riot Tags <todo/> is specified in an external file -->
+    <script src="/public/riot/app.riot" type="riot"></script>
     <script src="/public/riot/todo.riot" type="riot"></script>
+    <script src="/public/riot/my-component.riot" type="riot"></script>
     <!-- Riot.js 4.x -->
     <script src="/dist/js/riot+compiler.min.js"></script>
     <script>
         (async function main() {
             await riot.compile();
-            riot.mount('todo');
+            //riot.mount('app, todo');
+            riot.mount('my-component');
         }())
     </script>
 </body>
