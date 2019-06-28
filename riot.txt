@@ -1,0 +1,3 @@
+command to compile all tags to js
+
+D:\www\root_path> .\node_modules\.bin\riot .\public\riot\ -o .\public\riot\tags.js

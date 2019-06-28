@@ -38,19 +38,31 @@
     <script src="/dist/js/moment.min.js"></script>
 
     <!-- Riot Tags <todo/> is specified in an external file -->
+    <!--
     <script src="/public/riot/todo.riot" type="riot"></script>
     <script src="/public/riot/app.riot" type="riot"></script>
-    <!--
     <script src="/public/riot/child-tag.riot" type="riot"></script>
     <script src="/public/riot/my-component.riot" type="riot"></script>
     -->
     <!-- Riot.js 4.x -->
+    <!--
     <script src="/dist/js/riot+compiler.min.js"></script>
-    <script>
+    -->
+    <script src="/public/riot/tags.js"></script>
+    <script src="/dist/js/riot.min.js"></script>
+
+    <script type="module">
+        /*
         (async function main() {
             await riot.compile();            
             riot.mount('app', { title:'Riot v4.', ctitle: 'Enter something' });
         }())
+        */
+        import app from './tags.js'
+        riot.component(app)(document.querySelector('app'), { 
+            title:'Riot v4.', 
+            ctitle: 'Enter something'
+        })
     </script>
 </body>
 </html>
