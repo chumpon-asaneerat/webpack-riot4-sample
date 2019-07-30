@@ -1,3 +1,10 @@
 command to compile all tags to js
 
 D:\www\root_path> .\node_modules\.bin\riot .\public\riot\ -o .\public\riot\tags.js
+
+parcel command
+
+D:\www\root_path> npm run build
+
+and after build some link in html is point to invalid path manual fixed required so need to 
+check how to fixed problem.
