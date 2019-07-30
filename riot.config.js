@@ -1,3 +1,3 @@
 module.exports = {
-    hot: true
+    hot: false
 }
