@@ -16,6 +16,12 @@
     "url": "https://github.com/chumpon-asaneerat/gulp-riot4-sample/issues"
   },
   "homepage": "https://github.com/chumpon-asaneerat/gulp-riot4-sample#readme",
-  "devDependencies": {},
+  "devDependencies": {
+    "@riotjs/compiler": "^4.3.5",
+    "@riotjs/hot-reload": "^4.0.0",
+    "@riotjs/parcel-plugin-riot": "^4.0.1",
+    "parcel-bundler": "^1.12.3",
+    "riot": "^4.3.5"
+  },
   "dependencies": {}
 }
