@@ -1,4 +1,7 @@
 Riot.js 4.x components:
+    Riot Functional testing:
+        ☐ Test create multiple tag.
+        ☐ Test link/bind tags at runtime.
     Designer:
         ☐ Designer tag
         ☐ Hotspot tag
