@@ -1,8 +1,7 @@
-Project Sample Todo template:
-Sub Tasks:
-    TasK1:
-        ☐ Sample
-        ☐ Sample 2
-    Task2:
-        ✔ finished task
+Riot.js 4.x components:
+    Designer:
+        ☐ Designer tag
+        ☐ Hotspot tag
+    App:
+        ☐ App tag
         ☐ bbb 
