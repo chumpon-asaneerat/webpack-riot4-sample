@@ -2,7 +2,7 @@
   "name": "gulp-riot4-sample",
   "version": "1.0.0",
   "description": "The Gulp with Riot.js 4.x sample",
-  "main": "index.html",
+  "main": "./dist/index.html",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
