@@ -13,7 +13,8 @@ module.exports = {
         path: path.resolve(__dirname, 'dist/components'),
         filename: '[name]/[name].min.js'
     },
-    devtool: 'inline',
+    //devtool: 'inline',
+    devtool: "source-map",
     optimization: {
         minimize: true
     },
@@ -42,13 +43,15 @@ module.exports = {
                 {
                     // fallback to style-loader in development
                     loader: process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader,
+                    options: { sourceMap: true }
                 },
                 {
                     loader: 'css-loader',
-                    options: { modules: false }
+                    options: { modules: false, sourceMap: true }
                 },
                 {
-                    loader: "sass-loader"
+                    loader: "sass-loader",
+                    options: { sourceMap: true }
                 }
             ]
         }, {
@@ -58,12 +61,13 @@ module.exports = {
             use: [
                 // style-loader
                 { 
-                    loader: 'style-loader'
+                    loader: 'style-loader',
+                    options: { sourceMap: true }
                 },
                 // css-loader
                 {
                     loader: 'css-loader',
-                    options: { modules: false }
+                    options: { modules: false, sourceMap: true }
                 }
             ]
         }, {
