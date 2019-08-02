@@ -1,7 +1,7 @@
 {
-  "name": "gulp-riot4-sample",
+  "name": "webpack-riot4-sample",
   "version": "1.0.0",
-  "description": "The Gulp with Riot.js 4.x sample",
+  "description": "The Webpack with Riot.js 4.x sample",
   "main": "./dist/index.html",
   "private": true,
   "scripts": {
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chumpon-asaneerat/gulp-riot4-sample.git"
+    "url": "git+https://github.com/chumpon-asaneerat/webpack-riot4-sample.git"
   },
   "author": "Chumpon Asaneerat",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/chumpon-asaneerat/gulp-riot4-sample/issues"
+    "url": "https://github.com/chumpon-asaneerat/webpack-riot4-sample/issues"
   },
-  "homepage": "https://github.com/chumpon-asaneerat/gulp-riot4-sample#readme",
+  "homepage": "https://github.com/chumpon-asaneerat/webpack-riot4-sample#readme",
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
