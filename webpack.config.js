@@ -15,7 +15,7 @@ module.exports = {
     },
     devtool: "source-map",
     optimization: {
-        minimize: true
+        minimize: false
     },
     module: {
         rules: [{
